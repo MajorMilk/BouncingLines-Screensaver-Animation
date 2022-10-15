@@ -1,16 +1,16 @@
 let G, square1, square2,square3,square4, FRAMECOUNT,CX,CY;
 function setup() {
-  CX = 400;
-  CY = 400;
+  CX = 600;
+  CY = 1000;
   createCanvas(CX,CY);
   G = 1.5;
   FRAMECOUNT = 1;
   rectMode(CENTER);
   //                          X     =    y/2
-  square1 = new Square(CX/2, 10, -30, 0, 20);
-  square2 = new Square(CX/2, 10, 30, 0, 20);
-  //square3 = new Square(CX/2, 10, -60, 0, 20);
-  //square4 = new Square(CX/2, 10, 60, 0, 20);
+  square1 = new Square(CX/2, 10, -50, 0, 20);
+  square2 = new Square(CX/2, 10, 50, 0, 20);
+  square3 = new Square(CX/2, 10, -75, 0, 20);
+  square4 = new Square(CX/2, 10, 75, 0, 20);
   stroke(0,138,216); 
   strokeWeight(3);
 }
@@ -20,13 +20,13 @@ function draw() {
   fill(255);
    square1.drawLines();
    square2.drawLines(); 
-   //square3.drawLines();
-   //square4.drawLines();
+   square3.drawLines();
+   square4.drawLines();
    
    square1.applyGravity();
    square2.applyGravity();
-   //square3.applyGravity();
-   //square4.applyGravity();
+   square3.applyGravity();
+   square4.applyGravity();
 
   //square1.show();
   //square2.show();
@@ -35,13 +35,13 @@ function draw() {
   
   square1.applyGravity();
   square2.applyGravity();
-  //square3.applyGravity();
-  //square4.applyGravity();
+  square3.applyGravity();
+  square4.applyGravity();
   
   square1.move();
   square2.move();
-  //square3.move();
-  //square4.move();
+  square3.move();
+  square4.move();
   
   
   
@@ -116,7 +116,7 @@ class Square {
           line(pos2.x,pos2.y, pos3.x,pos3.y);
          
           //Removes Trail after a set amount of time
-          if(this.History.length > 220)
+          if(this.History.length > 1500)
           {
              this.History.splice(0,1);
           }
