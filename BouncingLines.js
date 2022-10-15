@@ -1,7 +1,7 @@
 let G, square1, square2,square3,square4, FRAMECOUNT,CX,CY;
 function setup() {
   CX = 600;
-  CY = 1000;
+  CY = 600;
   createCanvas(CX,CY);
   G = 1.5;
   FRAMECOUNT = 1;
