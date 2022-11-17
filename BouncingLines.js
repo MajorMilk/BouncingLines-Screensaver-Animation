@@ -116,7 +116,7 @@ class Square {
           line(pos2.x,pos2.y, pos3.x,pos3.y);
          
           //Removes Trail after a set amount of time
-          if(this.History.length > 1500)
+          if(this.History.length > 150)
           {
              this.History.splice(0,1);
           }
